@@ -1,5 +1,5 @@
 {
-	"invocation": "Cosa posso mangiare",
+	"invocation": "aiutami in cucina",
 	"intents": [
 		{
 			"name": "WhatCanIEatIntent",
@@ -19,8 +19,7 @@
 				{
 					"name": "ingredients",
 					"type": {
-						"alexa": "AMAZON.US_FIRST_NAME",
-						"dialogflow": "@sys.given-name"
+						"alexa": "AMAZON.Food"	
 					}
 				}
 			]

@@ -59,6 +59,7 @@ function doThese(variable) {
 *
 */
 function checkMessage(object) {
+  console.log("RESPONSE SVUOTAFRIGO:",object)
   let obj = JSON.parse(object)
   if(obj.status != 0) {
     return false;
@@ -71,7 +72,10 @@ function checkMessage(object) {
     let x = 0
     message = "Ho trovato in totale " + obj.length + " ricette "
     for(let i = 0; i < obj.length; i++) {
-      let level = obj[i].difficolta.length != 0 ? " di difficoltà " + obj[i].difficolta : ''
+      let level = ""
+      if(!!obj[i].difficolta) {
+        level = " di difficoltà " + obj[i].difficolta
+      }
       message = message + ", " + obj[i].nome + level
     }
   return message
