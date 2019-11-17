@@ -37,7 +37,7 @@ app.setHandler({
 
     async IngredientsIntent() {
       let variable = this.$inputs.ingredients.value
-      variable = variable.split(",")
+      variable = variable.split(" ")
       let res = await doThese(variable);
       let message = checkMessage(res)
       this.tell(message)
