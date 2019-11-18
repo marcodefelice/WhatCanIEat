@@ -1,2 +1,5 @@
 # WhatCanIEat
-help for what can i eat - alexa skil
+Ask to Alexa What you can eat today
+
+# Framework
+Jovo nodeJs
