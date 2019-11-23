@@ -1,5 +1,5 @@
 'use strict';
-var config = require('../config.js');
+var config = require('../config/config.js');
 var request = require("request");
 
 var callresult  = null

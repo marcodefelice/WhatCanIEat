@@ -42,7 +42,20 @@ app.setHandler({
       let message = checkMessage(res)
       this.tell(message)
     },
-});
+
+    YesIntent() {
+      this.ask('Perfetto, dimmi gli ingredienti che desideri utilizzare.');
+    },
+
+    NoIntent() {
+      this.ask('Bene, se hai bisogno sono qui');
+    },
+
+    END() {
+        this.ask('Bene, se hai bisogno sono qui');
+    }
+
+    });
 
 
 function doThese(variable) {
