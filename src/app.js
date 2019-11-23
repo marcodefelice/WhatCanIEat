@@ -76,7 +76,11 @@ function checkMessage(object) {
       if(!!obj[i].difficolta) {
         level = " di difficoltà " + obj[i].difficolta
       }
-      message = message + ", " + obj[i].nome + level
+      let source = ""
+      if(!!obj[i].source) {
+        source = ",trovata su " + obj[i].source
+      }
+      message = message + ", " + obj[i].nome + level + source
     }
   return message
 }
