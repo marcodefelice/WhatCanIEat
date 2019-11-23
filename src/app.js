@@ -11,6 +11,7 @@ const { JovoDebugger } = require('jovo-plugin-debugger');
 const { FileDb } = require('jovo-db-filedb');
 
 const { CheckRecipe } = require('./actions/CheckRecipe');
+const { ConfirmCheck } = require('./actions/ConfirmCheck');
 
 const app = new App();
 
@@ -42,7 +43,16 @@ app.setHandler({
       let message = checkMessage(res)
       this.tell(message)
     },
-});
+
+    YesIntent() {
+      this.ask('Perfetto, dimmi gli ingredienti che desideri utilizzare.');
+    },
+
+    END() {
+        this.ask('Bene, se hai bisogno sono qui');
+    }
+
+    });
 
 
 function doThese(variable) {

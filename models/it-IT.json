@@ -9,6 +9,15 @@
 			]
 		},
 		{
+			"name": "YesIntent",
+			"phrases": [
+				"Si",
+				"No",
+				"ok",
+				"va bene"
+			]
+		},
+		{
 			"name": "IngredientsIntent",
 			"phrases": [
 				"{ingredients}",
@@ -19,7 +28,7 @@
 				{
 					"name": "ingredients",
 					"type": {
-						"alexa": "AMAZON.Food"	
+						"alexa": "AMAZON.Food"
 					}
 				}
 			]

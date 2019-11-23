@@ -1,0 +1,99 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "assistente in cucina",
+            "intents": [
+                {
+                    "name": "WhatCanIEatIntent",
+                    "slots": [],
+                    "samples": [
+                        "cosa mi consigli di mangiare",
+                        "cosa posso mangiare"
+                    ]
+                },
+                {
+                    "name": "IngredientsIntent",
+                    "slots": [
+                        {
+                            "name": "ingredients",
+                            "type": "AMAZON.Food"
+                        }
+                    ],
+                    "samples": [
+                        "voglio cucinare con {ingredients}",
+                        "consigliami una ricetta con {ingredients}",
+                        "si {ingredients} e {ingredients}",
+                        "cerca qualcosa con {ingredients} e {ingredients}",
+                        "cerca {ingredients}",
+                        "cerca qualcosa con {ingredients}",
+                        "si {ingredients}",
+                        "si cerca qualcosa con {ingredients}",
+                        "{ingredients} e {ingredients}",
+                        "{ingredients}",
+                        "ho {ingredients}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "va bene grazie e alla prossima"
+                    ]
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": [
+                        "d'accordo",
+                        "ok",
+                        "va bene",
+                        "si"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": [
+                        "no",
+                        "no grazie"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "IngredientsIntent",
+                    "delegationStrategy": "SKILL_RESPONSE",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.196227425093"
+                    },
+                    "slots": [
+                        {
+                            "name": "ingredients",
+                            "type": "AMAZON.Food",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Confirm.Intent.196227425093",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Desideri cercare altre ricette ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Vuoi che continui a cercare altre ricette?"
+                    }
+                ]
+            }
+        ]
+    }
+}
