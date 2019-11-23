@@ -12,9 +12,14 @@
 			"name": "YesIntent",
 			"phrases": [
 				"Si",
-				"No",
 				"ok",
 				"va bene"
+			]
+		},
+		{
+			"name": "NoIntent",
+			"phrases": [
+				"no"
 			]
 		},
 		{
