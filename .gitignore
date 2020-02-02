@@ -59,3 +59,11 @@ typings/
 
 # next.js build output
 .next
+
+node_modules/
+db/
+bundle/
+bundle.zip
+.env
+.vscode
+platforms/

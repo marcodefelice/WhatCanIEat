@@ -4,7 +4,7 @@ Is a little chatbot developed for Alexa Amazon echo skill.
 - Another ideas is, for help on questions and curiosity into a cook world
 
 ## Prerequisites
-- Node JS v 11 minimum 
+- Node JS v 11 minimum
 - Jovo framework
 
 ### Installing
