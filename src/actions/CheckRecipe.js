@@ -21,7 +21,7 @@ function doRequest(variable) {
           Host: 'www.apphost.it',
           'User-Agent': 'PostmanRuntime/7.19.0',
           'content-type': 'multipart/form-data' },
-       formData: { ingredients: JSON.stringify(variable) } };
+       formData: { ingredients: JSON.stringify(variable), token: "AlexaMarcoDeFelice123" } };
 
       request(options, function (error, res, body) {
         if (!error && res.statusCode == 200) {
